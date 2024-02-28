@@ -4,16 +4,146 @@
     box-sizing: border-box;
 }
 
-.nav-bar {
+:root {
+    --color1: #215732;
+    --color2: #b4db3f;
+    --color3: #efefef;
+    --color4: #211e21;
+}
+
+html {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    color: var(--color1);
+    font-size: 10px;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.header {
     position: fixed;
     top: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    min-height: 10vh;
+    max-height: 20vh;
+    padding: 0.5% 3%;
+    background-color: var(--color3);
+    z-index: 1000;
+}
+
+.header-img {
+    width: auto;
+    height: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3vw;
+    font-size: 1.7rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.hero {
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-text-container {
+    padding: 10% 15%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-text-container img {
+    width: 40vw;
+    min-width: 300px;
+    max-width: 1000px;
+    height: auto;
+}
+
+.hero-text-container p {
+    font-size: 2rem;
+    width: 37vw;
+    max-width: 1000px;
+    min-width: 280px;
+    text-align: justify;
+    margin-left: 5%;
+}
+
+.hero-text-container a {
+    margin-top: 5rem;
+    margin-left: 5%;
+    text-decoration: none;
+    background-color: var(--color1);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: white; 
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .container {
-
+    padding: 0 15%;
+    width: 100vw;
+    height: auto;
 }
 
-@media (max-width: 768px) {
+.features {
+    padding-top: 15vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.features h1 {
+    font-size: 4rem;
+}
+
+.features ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 5rem;
+}
+
+.features ul li {
+    list-style-type: none;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    background-color: #efefef;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 5px 10px 20px var(--color1);
+}
+
+.features ul li i {
+    font-size: 5rem;
+}
+
+@media (max-width: 320px) {
     
 }
