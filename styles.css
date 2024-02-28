@@ -17,6 +17,7 @@ html {
     font-size: 10px;
     overflow-x: hidden;
     scrollbar-width: thin;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -50,6 +51,10 @@ html {
 .nav-link {
     text-decoration: none;
     color: var(--color1);
+}
+
+.nav-link:hover {
+    color: var(--color2)
 }
 
 .hero {
@@ -96,29 +101,35 @@ html {
     width: fit-content;
 }
 
+.hero-text-container a:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
 .hero video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.container {
-    padding: 0 15%;
-    width: 100vw;
-    height: auto;
+.bloom-logo {
+    height: 5.5rem;
+    vertical-align: bottom;
+    top: 2px;
+    position: relative;
+}
+
+h1 {
+    font-size: 4rem;
 }
 
 .features {
-    padding-top: 15vh;
-    width: 100%;
-    height: 100vh;
+    padding: 15vh 15%;
+    width: 100vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-}
-
-.features h1 {
-    font-size: 4rem;
 }
 
 .features ul {
@@ -144,6 +155,92 @@ html {
     font-size: 5rem;
 }
 
+
+.pricing {
+    background-color: var(--color3);
+    width: 100vw;
+    height: auto;
+    padding: 15vh 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pricing h1{
+    text-align: center;
+}
+
+.plans-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-areas: 'features free premium';
+    height: fit-content;
+    font-size: 2rem;
+    min-width: 700px;
+}
+
+.plans div ul li {
+    list-style-type: none;
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--color2);
+    font-style: italic;
+}
+
+.plans div ul li:last-of-type {
+    font-size: 2.5rem;
+}
+
+.plan-feature {
+    grid-area: features;
+}
+
+.free-plan {
+    grid-area: free;
+    color: var(--color2);
+}
+
+.premium-plan {
+    grid-area: premium;
+}
+
+.join-plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    font-size: 2rem;
+    height: 30rem;
+    text-align: center;
+}
+
+.join-plan h1{
+    background-color: var(--color1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #b4db3f;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.join-free, .join-premium {
+    background-color: #efefef;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px var(--color1);
+    text-align: middle;
+    min-height: 40rem;
+    min-width: 20rem
+}
+
+.join-free h2, .join-premium h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
 @media (max-width: 320px) {
     
 }
