@@ -75,7 +75,7 @@ html {
 
 .hero-text-container img {
     width: 40vw;
-    min-width: 300px;
+    min-width: 250px;
     max-width: 1000px;
     height: auto;
 }
@@ -84,7 +84,7 @@ html {
     font-size: 2rem;
     width: 37vw;
     max-width: 1000px;
-    min-width: 280px;
+    min-width: 230px;
     text-align: justify;
     margin-left: 5%;
 }
@@ -136,7 +136,7 @@ h1 {
 
 .features ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 5rem;
 }
 
@@ -178,6 +178,13 @@ h1 {
     border-radius: 20px;
     box-shadow: 5px 10px 20px var(--color1);
     padding-bottom: 3rem;
+    min-width: 28rem;
+}
+
+@media (min-width: 1371px) {
+    .premium-plan {
+        transform: scaleY(110%)
+    }
 }
 
 .pricing h2 {
@@ -232,14 +239,83 @@ h1 {
     color: var(--color3)
 }
 
-.form-section {
+.footer {
     width: 100vw;
-    height: 50vh;
-    /* margin-bottom: 10vh; */
-    padding: 15vh 15%;
+    height: auto;
+    padding: 3vh 15%;
+    background-color: var(--color1);
+    color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
 
-@media (max-width: 320px) {
-    
+.email {
+    width: 20rem;
+    height: 3rem;
+    color: var(--color1); 
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.email:active {
+    border: 2px dashed var(--color2);
+}
+
+.submit {
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--color1); 
+    border-radius: 10px;
+    border: 2px solid var(--color1);
+    font-weight: bold;
+}
+
+.follow {
+    display: flex;
+    font-size: 2.8rem;
+    gap: 2rem;
+}
+
+.follow a{
+    text-decoration: none;
+    color: var(--color3);
+}
+
+@media (max-width: 376px) {
+    html {
+        font-size: 8px
+    }
+    .header {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        background-color: var(--color1);
+    }
+    .nav-link {
+        color: var(--color3);
+        padding: 0.5rem 0;
+    }
+    .hero {
+        margin-top: 13vh;
+    }
+    .features, .pricing {
+        padding-top: 19vh;
+    }
 }
