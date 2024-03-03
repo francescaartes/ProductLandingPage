@@ -293,6 +293,13 @@ h1 {
     color: var(--color3);
 }
 
+.disclaimer {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: red;
+    text-align: center;
+}
+
 @media (max-width: 376px) {
     html {
         font-size: 8px
